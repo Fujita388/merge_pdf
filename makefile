@@ -5,4 +5,4 @@ volume:
 	g++ -std=c++11 main.o split.o
 
 clean: 
-	rm *.lammpstrj *.o a.out
+	rm *.o a.out
