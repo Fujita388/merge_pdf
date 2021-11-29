@@ -1,6 +1,10 @@
 *.out
 *.pdf
-micelle_1.2.dat
-minimize_1.2.dat
 *.o
 *.lammpstrj
+micelle_0.6.dat
+minimize_0.6.dat
+micelle_1.2.dat
+minimize_1.2.dat
+micelle_2.4.dat
+minimize_2.4.dat
