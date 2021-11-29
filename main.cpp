@@ -12,10 +12,12 @@ using namespace std;
 
 // 気相体積を測定する関数
 void gas_volume(double d, double thresh) {
-	ifstream ifile("micelle.lammpstrj");  // 読み込むファイルのパスを指定
-	ofstream ofile("micelle.dat");  // 書き出すファイルのパスを指定
+//	ifstream ifile("micelle.lammpstrj");  // 読み込むファイルのパスを指定
+	ifstream ifile("minimize.lammpstrj");  // 読み込むファイルのパスを指定
+//	ofstream ofile("micelle.dat");  // 書き出すファイルのパスを指定
+	ofstream ofile("minimize.dat");  // 書き出すファイルのパスを指定
 
-	const int N = 10000;
+	const int N = 200000;
 	int num_atoms;  // 粒子数
 	double L;  // ボックスサイズ
 	double V = pow(d, 3.0);  // セルの体積
@@ -68,6 +70,6 @@ void gas_volume(double d, double thresh) {
 
 
 int main() {
-	gas_volume(1.4875, 0.1);
+	gas_volume(4.4625, 0.1);
 	return 0;
 }

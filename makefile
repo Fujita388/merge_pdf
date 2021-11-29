@@ -1,8 +1,16 @@
 all: 
 
-volume:
-	g++ -c -std=c++11 main.cpp split.cpp
-	g++ -std=c++11 main.o split.o
+CPPFLAGS=-std=c++11
+CPPFILE=main.cpp split.cpp
+OFILE=main.o split.o
+
+micelle:
+	$(CXX) -c $(CPPFLAGS) $(CPPFILE)
+	$(CXX) $(CPPFLAGS) $(OFILE) -o micelle.out
+
+minimize:
+	$(CXX) -c $(CPPFLAGS) $(CPPFILE)
+	$(CXX) $(CPPFLAGS) $(OFILE) -o minimize.out
 
 clean: 
-	rm *.o a.out
+	$(RM) $(OFILE) slurm-* *.png *.out
