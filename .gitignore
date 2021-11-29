@@ -1,5 +1,6 @@
 *.out
 *.png
-*.dat
+micelle.dat
+minimize.dat
 *.o
 *.lammpstrj

@@ -12,10 +12,14 @@ using namespace std;
 
 // 気相体積を測定する関数
 void gas_volume(double d, double thresh) {
-//	ifstream ifile("micelle.lammpstrj");  // 読み込むファイルのパスを指定
-	ifstream ifile("minimize.lammpstrj");  // 読み込むファイルのパスを指定
-//	ofstream ofile("micelle.dat");  // 書き出すファイルのパスを指定
-	ofstream ofile("minimize.dat");  // 書き出すファイルのパスを指定
+	char input[30];  // 標準入力から受け取るファイル名
+	char ifilename[30];
+	char ofilename[30];
+	cin >> input;
+	sprintf(ifilename, "%s.lammpstrj", input);
+	ifstream ifile(ifilename);  // 読み込むファイルのパスを指定
+	sprintf(ofilename, "%s.dat", input);
+	ofstream ofile(ofilename);  // 書き出すファイルのパスを指定
 
 	const int N = 200000;
 	int num_atoms;  // 粒子数
