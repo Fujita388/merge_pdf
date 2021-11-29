@@ -1,6 +1,6 @@
 *.out
-*.png
-micelle.dat
-minimize.dat
+*.pdf
+micelle_1.2.dat
+minimize_1.2.dat
 *.o
 *.lammpstrj

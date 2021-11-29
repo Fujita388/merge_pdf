@@ -9,4 +9,4 @@ o:
 	$(CXX) $(CPPFLAGS) $(OFILE)
 
 clean: 
-	$(RM) $(OFILE) *.png *.out
+	$(RM) $(OFILE) *.pdf *.out
